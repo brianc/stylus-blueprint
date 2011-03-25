@@ -7,6 +7,10 @@ container()
   width grid-width
   margin 0 auto
   clearfix()
+  //ie fix
+  * html &
+    text-align left
+    height 1%
 
 last()
   margin-right 0px
@@ -18,6 +22,10 @@ span(size, last = false)
   else
     margin-right span-margin
   width (grid-interval * size) - span-margin
+  //ie fix
+  * html &
+    display inline
+    overflow-x hidden
 
 pull(size)
   margin-left grid-interval * size
@@ -87,5 +95,3 @@ clearfix()
     visibility hidden
     overflow hidden
   display block
-
-
