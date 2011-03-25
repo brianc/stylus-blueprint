@@ -1,0 +1,46 @@
+grid-width = 950px
+grid-columns = 24
+grid-interval = 40px
+span-margin = 10px
+
+container()
+  width grid-width
+  margin 0 auto
+
+last()
+  margin-right 0px
+
+span(size, last = false)
+  float left
+  if last or size >= grid-columns
+    last()
+  else
+    margin-right span-margin    
+  width (grid-interval * size) - span-margin
+
+append(size)
+  padding-right grid-interval * size
+
+prepend(size)
+  padding-left grid-interval * size
+
+border(extra = 0)
+  padding-right 4px + ((extra * grid-interval)/2)
+  margin-right 5px + ((extra * grid-interval)/2)
+  border-right 1px solid #ddd
+
+.span-1
+  span 1
+  append 1
+  prepend 2
+  border()
+
+.span-2
+  span 2 last
+
+.span-3
+  span 3
+
+.span-24
+  span 24
+
