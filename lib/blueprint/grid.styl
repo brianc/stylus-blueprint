@@ -6,6 +6,7 @@ span-margin = 10px
 container()
   width grid-width
   margin 0 auto
+  clearfix()
 
 last()
   margin-right 0px
@@ -34,7 +35,57 @@ append(size)
 prepend(size)
   padding-left grid-interval * size
 
-border(extra = 0)
+bp-border(extra = 0)
   padding-right 4px + ((extra * grid-interval)/2)
   margin-right 5px + ((extra * grid-interval)/2)
   border-right 1px solid #ddd
+
+box-margin = 1.5em
+box-background-color = #e5ecf9
+
+//incase you need a gutter above/below element
+prepend-top()
+  margin-top box-margin
+
+append-bottom()
+  margin-bottom box-margin
+
+//mixin to create a padded box inside a column
+box()
+  padding box-margin
+  append-bottom()
+  background box-background-color
+
+hr-color = #ddd
+//use this to create a horizontal ruler across a column
+hr
+  background hr-color
+  color hr-color
+  clear()
+  float none
+  width 100%
+  height 1px
+  margin 0 0 1.45em
+  border none
+  .space
+    background white
+    color white
+    visibility hidden
+
+/* Clearing floats without extra markup
+   Based on How To Clear Floats Without Structural Markup by PiE
+   [http://www.positioniseverything.net/easyclearing.html] */
+clear()
+  clear both
+
+clearfix()
+  &:after
+    content "\0020"
+    display block
+    height 0
+    clear()
+    visibility hidden
+    overflow hidden
+  display block
+
+
