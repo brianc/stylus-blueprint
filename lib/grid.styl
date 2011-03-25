@@ -15,8 +15,18 @@ span(size, last = false)
   if last or size >= grid-columns
     last()
   else
-    margin-right span-margin    
+    margin-right span-margin
   width (grid-interval * size) - span-margin
+
+pull(size)
+  margin-left grid-interval * size
+  float left
+  position relative
+
+push(size)
+  margin 0 -(grid-interval * size) 1.5em (grid-interval * size)
+  float left
+  position relative
 
 append(size)
   padding-right grid-interval * size
@@ -28,19 +38,3 @@ border(extra = 0)
   padding-right 4px + ((extra * grid-interval)/2)
   margin-right 5px + ((extra * grid-interval)/2)
   border-right 1px solid #ddd
-
-.span-1
-  span 1
-  append 1
-  prepend 2
-  border()
-
-.span-2
-  span 2 last
-
-.span-3
-  span 3
-
-.span-24
-  span 24
-
