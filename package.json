@@ -6,6 +6,7 @@
     "url": ""
   },
   "author": "Brian Carlson <brian.m.carlson@gmail.com>",
+  "main" : "./lib",
   "directories": {
     "lib": "."
   },
