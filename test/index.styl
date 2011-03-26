@@ -1,26 +1,20 @@
 @import 'blueprint/reset'
 @import 'blueprint/grid'
+@import 'blueprint/typography'
 
 #container
-  container()
+  container('grid.png')
+  .number
+    span 1
 
-#nav
-  span 6
-#content
-  span 18 last
-.next
-  clearfix()
+  .section-one
+    span 12
 
-.number
-  span 1
+  .section-two
+    span 12 last
 
-.section-one
-  span 12
-.section-two
-  span 12 last
+  .blurb
+    span 6
 
-.blurb
-  span 6
-
-.last
-  last()
+  .last
+    last()

@@ -3,10 +3,11 @@ grid-columns = 24
 grid-interval = 40px
 span-margin = 10px
 
-container()
+container(debugImg = false)
   width grid-width
   margin 0 auto
   clearfix()
+  background url(debugImg) if debugImg
   //ie fix
   * html &
     text-align left
