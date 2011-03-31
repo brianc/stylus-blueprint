@@ -1,0 +1,17 @@
+!!!
+html
+  head
+    title stylus-blueprint forms test
+    link(rel: 'stylesheet', type: 'text/css', href:'form.css')
+  body
+    #container
+      h1 Forms
+      hr
+      form
+        fieldset
+          legend Simple sample form
+          p
+            label(for: "dummy0") Text input
+            input#dummy0.title(type: 'text', value: 'test')
+          p
+            label
