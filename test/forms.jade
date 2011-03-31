@@ -4,24 +4,25 @@ html
     title stylus-blueprint form
     link(rel: 'stylesheet', type: 'text/css', href: 'forms.css')
   body
-    h1 forms
-    hr
-    #simple
-      form#dummy
-        fieldset
-          legend Simple sample form
-          p
-            label(for: 'dummy0') Text input (title)
-            input#dummy0.title(value: 'field with mixin title()', type: 'text')
-          p
-            label(for: 'dummy1') Another field
-            input#dummy1.text(type: 'text', value: 'field with mixin text()')
-          p
-            label(for: 'dummy2') Textarea
-            textarea#dummy2(rows: 5, cols: 20)
-          p
-            label(:for 'dummy3') A password field
-            input#dummy3.text(type: 'password')
-          p
-            input(type: 'submit', value: 'submit')
-            input(type: 'reset', value: 'reset')  
+    #container
+      h1 forms
+      hr
+      #simple
+        form#dummy
+          fieldset
+            legend Simple sample form
+            p
+              label(for: 'dummy0') Text input (title)
+              input#dummy0.title(value: 'field with mixin title()', type: 'text')
+            p
+              label(for: 'dummy1') Another field
+              input#dummy1.text(type: 'text', value: 'field with mixin text()')
+            p
+              label(for: 'dummy2') Textarea
+              textarea#dummy2(rows: 5, cols: 20)
+            p
+              label(:for 'dummy3') A password field
+              input#dummy3.text(type: 'password')
+            p
+              input(type: 'submit', value: 'submit')
+              input(type: 'reset', value: 'reset')  
