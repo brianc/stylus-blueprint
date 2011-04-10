@@ -23,6 +23,7 @@ var router = connect.router(function(app) {
       stylus(contents)
         .set('filename', path)
         .set('paths', [blueprint])
+        .set('warn', true)
         .render(function(err, css) {
           if(err) return next(err);
           res.writeHead(200, {'content-type':'text/css'})

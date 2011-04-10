@@ -13,13 +13,13 @@ container(debugImg = false)
     text-align left
     height 1%
 
-last()
+span-last()
   margin-right 0px
 
-span(size, last = false)
+span(size, isLast = false)
   float left
-  if last or size >= grid-columns
-    last()
+  if isLast or size >= grid-columns
+    span-last
   else
     margin-right span-margin
   width (grid-interval * size) - span-margin
