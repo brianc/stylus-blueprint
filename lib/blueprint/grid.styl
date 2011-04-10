@@ -19,7 +19,7 @@ span-last()
 span(size, isLast = false)
   float left
   if isLast or size >= grid-columns
-    span-last
+    span-last()
   else
     margin-right span-margin
   width (grid-interval * size) - span-margin
