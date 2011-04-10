@@ -1,9 +1,9 @@
 {
   "name": "stylus-blueprint",
   "description": "Blueprint css framework ported to stylus",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "repository": {
-    "url": ""
+    "url": "https://github.com/brianc/stylus-blueprint"
   },
   "author": "Brian Carlson <brian.m.carlson@gmail.com>",
   "main" : "./lib",
