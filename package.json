@@ -1,16 +1,16 @@
 {
-  "name": "stylus-blueprint",
-  "description": "Blueprint css framework ported to stylus",
-  "version": "0.2.0",
-  "repository": {
-    "url": "https://github.com/brianc/stylus-blueprint"
-  },
-  "author": "Brian Carlson <brian.m.carlson@gmail.com>",
-  "main" : "./lib",
-  "directories": {
-    "lib": "."
-  },
-  "engines": {
-    "node": "*"
-  }
+    "name": "stylus-blueprint",
+    "description": "Blueprint CSS framework ported to Stylus",
+    "version": "0.2.1",
+    "repository": "git://github.com/brianc/stylus-blueprint.git",
+    "author": "Brian Carlson <brian.m.carlson@gmail.com>",
+    "licenses": [
+        { "type": "Modified MIT", "url": "https://raw.github.com/joshuaclayton/blueprint-css/master/LICENSE" }
+    ],
+    "dependencies": {
+        "stylus": ">= 0.1.0"
+    },
+    "main": "./lib/index.js",
+    "engines": { "node": "*" },
+    "keywords": [ "stylus", "blueprint", "framework", "css", "style", "stylesheets" ]
 }
